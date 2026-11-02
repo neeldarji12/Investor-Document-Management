@@ -1,0 +1,1093 @@
+/**
+ * APPLEN SOLUTIONS – DJ Investor Portal
+ * File: src/Styles/Pages/home.css
+ * 
+ * Premium Institutional Home / Landing Page Stylesheet
+ * Financial Market Design System:
+ * - Color Palette: #142B45, #102238, #FFFFFF, #F5F7FA, #E8F1F8, #E2E8F0, #15966A, #C6A15B
+ * - Minimal, elegant, corporate, trustworthy aesthetic
+ * - Fully responsive across Desktop, Tablet, and Mobile devices
+ */
+
+.home-page {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--color-bg-light, #F5F7FA);
+}
+
+.home-section-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.home-hero {
+  position: relative;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F5F7FA 100%);
+  border-bottom: 1px solid var(--color-border, #E2E8F0);
+  padding: 4.5rem 1.5rem 5.5rem;
+}
+
+.hero-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-dark-navy, #102238);
+  color: var(--color-accent-gold, #C6A15B);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm, 6px);
+  border: 1px solid rgba(198, 161, 91, 0.35);
+  margin-bottom: 1.5rem;
+  width: fit-content;
+}
+
+.hero-badge .badge-icon {
+  font-size: 0.875rem;
+  color: var(--color-accent-gold, #C6A15B);
+}
+
+.hero-title {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--color-dark-navy, #102238);
+  margin-bottom: 1.25rem;
+}
+
+.hero-title-accent {
+  color: var(--color-accent-green, #15966A);
+}
+
+.hero-lead {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary, #475569);
+  max-width: 580px;
+  margin-bottom: 2.25rem;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.btn-hero-primary {
+  background: var(--color-primary-navy, #142B45);
+  color: #FFFFFF;
+  border: 1px solid var(--color-dark-navy, #102238);
+  font-family: var(--font-sans, inherit);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.85rem 1.85rem;
+  border-radius: var(--radius-md, 8px);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  box-shadow: 0 4px 12px rgba(20, 43, 69, 0.18);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-hero-primary:hover {
+  background: var(--color-dark-navy, #102238);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(20, 43, 69, 0.25);
+}
+
+.btn-hero-secondary {
+  background: #FFFFFF;
+  color: var(--color-primary-navy, #142B45);
+  border: 1px solid var(--color-border, #E2E8F0);
+  font-family: var(--font-sans, inherit);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.85rem 1.65rem;
+  border-radius: var(--radius-md, 8px);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  box-shadow: 0 1px 3px rgba(16, 34, 56, 0.05);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-hero-secondary:hover {
+  background: var(--color-light-blue, #EAF1F8);
+  border-color: #CBD5E1;
+  color: var(--color-dark-navy, #102238);
+  transform: translateY(-1px);
+}
+
+.hero-trust-indicators {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--color-border, #E2E8F0);
+}
+
+.trust-indicator-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-secondary, #475569);
+}
+
+.trust-indicator-item svg {
+  color: var(--color-accent-green, #15966A);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   2. HERO VISUAL WIDGET (FINANCIAL MARKET DASHBOARD MOCK)
+   ========================================================================== */
+.hero-visual-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-dashboard-mock {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-xl, 16px);
+  padding: 1.75rem;
+  box-shadow: 0 20px 40px -8px rgba(16, 34, 56, 0.12), 0 1px 3px rgba(16, 34, 56, 0.04);
+}
+
+.mock-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--color-border, #E2E8F0);
+  margin-bottom: 1.25rem;
+}
+
+.mock-live-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.live-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent-green, #15966A);
+  box-shadow: 0 0 0 3px rgba(21, 150, 106, 0.2);
+}
+
+.live-label {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--color-primary-navy, #142B45);
+}
+
+.mock-tier-badge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--color-accent-gold, #C6A15B);
+  background: var(--color-accent-gold-subtle, #FBF7EE);
+  border: 1px solid rgba(198, 161, 91, 0.3);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm, 6px);
+}
+
+.mock-financial-summary {
+  background: var(--color-bg-subtle, #F8FAFC);
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-lg, 12px);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.mock-metric-main {
+  margin-bottom: 1rem;
+}
+
+.mock-label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted, #64748B);
+  margin-bottom: 0.35rem;
+}
+
+.mock-val-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.mock-big-num {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-dark-navy, #102238);
+  letter-spacing: -0.02em;
+}
+
+.mock-gain-badge {
+  display: inline-flex;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-accent-green, #15966A);
+  background: var(--color-accent-green-bg, #E6F4EA);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm, 6px);
+}
+
+.mock-sub-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid #E2E8F0;
+}
+
+.mock-stat-item .stat-label {
+  display: block;
+  font-size: 0.6875rem;
+  color: var(--color-text-muted, #64748B);
+  margin-bottom: 0.15rem;
+}
+
+.mock-stat-item .stat-val {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-primary-navy, #142B45);
+}
+
+.mock-progress-box {
+  margin-bottom: 1.25rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+}
+
+.progress-title {
+  color: var(--color-text-secondary, #475569);
+}
+
+.progress-pct {
+  color: var(--color-accent-green, #15966A);
+  font-weight: 700;
+}
+
+.progress-track {
+  width: 100%;
+  height: 7px;
+  background: #E2E8F0;
+  border-radius: var(--radius-pill, 9999px);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #15966A 0%, #10B981 100%);
+  border-radius: var(--radius-pill, 9999px);
+}
+
+.mock-doc-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.feed-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.85rem;
+  background: var(--color-bg-subtle, #F8FAFC);
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-md, 8px);
+}
+
+.feed-doc-info {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.feed-icon {
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.feed-icon.verified {
+  color: var(--color-accent-green, #15966A);
+}
+
+.feed-icon.review {
+  color: #6D28D9;
+}
+
+.feed-name {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-dark-navy, #102238);
+}
+
+.feed-sub {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted, #64748B);
+}
+
+.feed-badge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-pill, 9999px);
+}
+
+.feed-badge.verified {
+  background: var(--color-accent-green-bg, #E6F4EA);
+  color: var(--color-accent-green, #15966A);
+  border: 1px solid var(--color-status-verified-border, #A7F3D0);
+}
+
+.feed-badge.review {
+  background: var(--color-status-review-bg, #F3E8FF);
+  color: var(--color-status-review, #6D28D9);
+  border: 1px solid var(--color-status-review-border, #DDD6FE);
+}
+
+/* Floating Badges on Hero Widget */
+.floating-highlight-badge {
+  position: absolute;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-md, 8px);
+  padding: 0.65rem 0.95rem;
+  box-shadow: 0 8px 20px rgba(16, 34, 56, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  z-index: 2;
+  transition: transform 0.25s ease;
+}
+
+.floating-highlight-badge.highlight-top {
+  top: -16px;
+  right: -20px;
+}
+
+.floating-highlight-badge.highlight-bottom {
+  bottom: -16px;
+  left: -20px;
+}
+
+.floating-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm, 6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.floating-icon-wrap.green {
+  background: var(--color-accent-green-bg, #E6F4EA);
+  color: var(--color-accent-green, #15966A);
+}
+
+.floating-icon-wrap.gold {
+  background: var(--color-accent-gold-subtle, #FBF7EE);
+  color: var(--color-accent-gold, #C6A15B);
+}
+
+.floating-title {
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: var(--color-dark-navy, #102238);
+}
+
+.floating-subtitle {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted, #64748B);
+}
+
+/* ==========================================================================
+   3. SECTION HEADER COMMON STYLES
+   ========================================================================== */
+.home-section {
+  padding: 5.5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold, #C6A15B);
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-dark-navy, #102238);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.85rem;
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary, #475569);
+}
+
+/* ==========================================================================
+   4. SECTION 2: INVESTMENT OVERVIEW (SERVICES)
+   ========================================================================== */
+.services-section {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--color-border, #E2E8F0);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.service-card {
+  background: var(--color-bg-subtle, #F8FAFC);
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-lg, 12px);
+  padding: 2.25rem 1.85rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(16, 34, 56, 0.04);
+}
+
+.service-card:hover {
+  background: #FFFFFF;
+  border-color: #CBD5E1;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -4px rgba(16, 34, 56, 0.08);
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.service-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md, 8px);
+  background: var(--color-light-blue, #EAF1F8);
+  color: var(--color-primary-navy, #142B45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.service-card-tag {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-accent-gold, #C6A15B);
+  background: var(--color-accent-gold-subtle, #FBF7EE);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm, 6px);
+  border: 1px solid rgba(198, 161, 91, 0.25);
+}
+
+.service-card-title {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-dark-navy, #102238);
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.01em;
+}
+
+.service-card-lead {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary, #475569);
+  line-height: 1.55;
+  margin-bottom: 1.35rem;
+}
+
+.service-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem 0;
+  flex: 1;
+}
+
+.service-card-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary, #475569);
+  line-height: 1.5;
+  margin-bottom: 0.65rem;
+}
+
+.service-card-list li svg {
+  color: var(--color-accent-green, #15966A);
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.service-card-footer {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border, #E2E8F0);
+}
+
+.card-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: none;
+  border: none;
+  color: var(--color-primary-navy, #142B45);
+  font-family: var(--font-sans, inherit);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.card-action-btn:hover {
+  color: var(--color-accent-green, #15966A);
+  gap: 0.65rem;
+}
+
+/* ==========================================================================
+   5. SECTION 3: WHY CHOOSE OUR INVESTOR PORTAL?
+   ========================================================================== */
+.benefits-section {
+  background: var(--color-bg-light, #F5F7FA);
+  border-bottom: 1px solid var(--color-border, #E2E8F0);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.benefit-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-lg, 12px);
+  padding: 2rem 1.65rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(16, 34, 56, 0.04);
+}
+
+.benefit-card:hover {
+  border-color: #CBD5E1;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -5px rgba(16, 34, 56, 0.07);
+}
+
+.benefit-icon-pill {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md, 8px);
+  background: var(--color-dark-navy, #102238);
+  color: var(--color-accent-gold, #C6A15B);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 6px rgba(16, 34, 56, 0.15);
+}
+
+.benefit-card-title {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--color-dark-navy, #102238);
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.01em;
+}
+
+.benefit-card-text {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary, #475569);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   6. SECTION 4: HOW IT WORKS (ONBOARDING LIFECYCLE)
+   ========================================================================== */
+.workflow-section {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--color-border, #E2E8F0);
+}
+
+.steps-stepper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+}
+
+.step-card {
+  background: var(--color-bg-subtle, #F8FAFC);
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-lg, 12px);
+  padding: 1.85rem 1.5rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(16, 34, 56, 0.04);
+}
+
+.step-card:hover {
+  background: #FFFFFF;
+  border-color: #CBD5E1;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px -4px rgba(16, 34, 56, 0.08);
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.15rem;
+}
+
+.step-number-badge {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--color-accent-gold, #C6A15B);
+  background: var(--color-accent-gold-subtle, #FBF7EE);
+  border: 1px solid rgba(198, 161, 91, 0.3);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm, 6px);
+}
+
+.step-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md, 8px);
+  background: var(--color-light-blue, #EAF1F8);
+  color: var(--color-primary-navy, #142B45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.step-title {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-dark-navy, #102238);
+  margin-bottom: 0.55rem;
+  letter-spacing: -0.01em;
+}
+
+.step-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary, #475569);
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   7. SECTION 5: CONTACT US SECTION (id="contact")
+   ========================================================================== */
+.contact-section {
+  background: var(--color-bg-light, #F5F7FA);
+  border-bottom: 1px solid var(--color-border, #E2E8F0);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.contact-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-lg, 12px);
+  padding: 2.25rem 1.85rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(16, 34, 56, 0.04);
+}
+
+.contact-card:hover {
+  border-color: #CBD5E1;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -4px rgba(16, 34, 56, 0.08);
+}
+
+.contact-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md, 8px);
+  background: var(--color-light-blue, #EAF1F8);
+  color: var(--color-primary-navy, #142B45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.contact-card-title {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-dark-navy, #102238);
+  margin-bottom: 0.55rem;
+  letter-spacing: -0.01em;
+}
+
+.contact-card-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary, #475569);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.contact-card-highlight {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-primary-navy, #142B45);
+  background: var(--color-light-blue, #EAF1F8);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm, 6px);
+  border: 1px solid rgba(20, 43, 69, 0.08);
+  margin-bottom: 0.85rem;
+  word-break: break-all;
+}
+
+.contact-card-timing {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.775rem;
+  color: var(--color-text-muted, #64748B);
+  font-weight: 500;
+}
+
+.contact-card-timing svg {
+  color: var(--color-accent-gold, #C6A15B);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   8. SECTION 6: FINAL CALL TO ACTION (CTA BANNER)
+   ========================================================================== */
+.home-cta-section {
+  padding: 4.5rem 0 5.5rem;
+  background: var(--color-bg-light, #F5F7FA);
+}
+
+.cta-banner-card {
+  background: linear-gradient(135deg, #102238 0%, #142B45 60%, #173859 100%);
+  border-radius: var(--radius-xl, 16px);
+  padding: 3.5rem 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  border: 1px solid rgba(198, 161, 91, 0.35);
+  box-shadow: 0 20px 45px -10px rgba(16, 34, 56, 0.3);
+}
+
+.cta-banner-content {
+  max-width: 650px;
+}
+
+.cta-banner-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold, #C6A15B);
+  margin-bottom: 0.65rem;
+}
+
+.cta-banner-heading {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.85rem;
+}
+
+.cta-banner-desc {
+  font-size: 1.05rem;
+  color: #CBD5E1;
+  line-height: 1.6;
+}
+
+.cta-banner-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.btn-cta-gold {
+  background: var(--color-accent-gold, #C6A15B);
+  color: var(--color-dark-navy, #102238);
+  font-family: var(--font-sans, inherit);
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 0.95rem 2rem;
+  border-radius: var(--radius-md, 8px);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  box-shadow: 0 4px 14px rgba(198, 161, 91, 0.35);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-cta-gold:hover {
+  background: #D4B26F;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(198, 161, 91, 0.45);
+}
+
+.cta-sublinks {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.cta-sublink {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #94A3B8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cta-sublink:hover {
+  color: #FFFFFF;
+}
+
+.cta-separator {
+  color: #475569;
+  font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   8. RESPONSIVE DESIGN (DESKTOP, TABLET, MOBILE)
+   ========================================================================== */
+@media (max-width: 1100px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-trust-indicators {
+    justify-content: center;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-stepper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-banner-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 3rem 2rem;
+  }
+
+  .cta-banner-actions {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    padding: 3rem 1rem 4rem;
+  }
+
+  .hero-title {
+    font-size: 2.35rem;
+  }
+
+  .hero-lead {
+    font-size: 1rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .floating-highlight-badge {
+    display: none; /* Hide floating badges on small mobile screens to prevent overflow */
+  }
+
+  .services-grid,
+  .benefits-grid,
+  .steps-stepper,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .home-section {
+    padding: 3.5rem 0;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .cta-banner-heading {
+    font-size: 1.75rem;
+  }
+
+  .cta-banner-card {
+    padding: 2.25rem 1.5rem;
+  }
+
+  .btn-cta-gold {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero {
+    padding: 2.25rem 0.75rem 3rem;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+    line-height: 1.2;
+  }
+
+  .hero-lead {
+    font-size: 0.875rem;
+  }
+
+  .home-section {
+    padding: 2.75rem 0;
+  }
+
+  .home-section-container {
+    padding: 0 0.85rem;
+  }
+
+  .section-title {
+    font-size: 1.55rem;
+  }
+
+  .section-desc {
+    font-size: 0.825rem;
+  }
+
+  .contact-card,
+  .service-card,
+  .benefit-card,
+  .step-card {
+    padding: 1.35rem 1.15rem;
+  }
+}

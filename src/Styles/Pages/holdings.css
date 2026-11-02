@@ -1,0 +1,328 @@
+/**
+ * APPLEN SOLUTIONS – DJ Investor Portal
+ * File: src/Styles/Pages/holdings.css
+ * 
+ * Holdings & Portfolio Page Stylesheet
+ * Institutional asset allocation, portfolio summary cards,
+ * and private equity ledger table.
+ */
+
+.holdings-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.holdings-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ==========================================================================
+   PORTFOLIO HEADER & OVERVIEW
+   ========================================================================== */
+.holdings-hero {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--color-border);
+  padding: 2.25rem 0 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.holdings-hero-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.holdings-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.holdings-pretitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-accent-gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.holdings-title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-dark-navy);
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.holdings-subtitle {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  max-width: 720px;
+}
+
+/* ==========================================================================
+   PORTFOLIO METRICS SUMMARY GRID
+   ========================================================================== */
+.portfolio-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.portfolio-metric-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  padding: 1.25rem 1.35rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.portfolio-metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-hover);
+}
+
+.metric-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metric-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.metric-value {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-dark-navy);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.metric-submeta {
+  font-size: 0.725rem;
+  font-weight: 600;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.metric-submeta.positive {
+  color: var(--color-accent-green);
+}
+
+.metric-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-light-blue);
+  color: var(--color-primary-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border: 1px solid rgba(20, 43, 69, 0.1);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   HOLDINGS TABLE SECTION
+   ========================================================================== */
+.holdings-table-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-xs);
+  overflow: hidden;
+}
+
+.table-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-subtle);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.table-card-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-dark-navy);
+  margin: 0;
+}
+
+.table-badge-filter {
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: var(--color-primary-navy);
+  background: var(--color-light-blue);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-status-uploaded-border);
+}
+
+.table-responsive-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.holdings-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.holdings-table th {
+  background: var(--color-primary-navy);
+  color: #FFFFFF;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.725rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.holdings-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  vertical-align: middle;
+}
+
+.holdings-table tr:hover td {
+  background: var(--color-bg-subtle);
+}
+
+.company-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.company-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--color-light-blue);
+  color: var(--color-primary-navy);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(20, 43, 69, 0.12);
+  flex-shrink: 0;
+}
+
+.company-name {
+  font-weight: 700;
+  color: var(--color-dark-navy);
+}
+
+.company-sector {
+  font-size: 0.725rem;
+  color: var(--color-text-muted);
+}
+
+.cell-currency {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-dark-navy);
+}
+
+.cell-gain {
+  font-weight: 700;
+  color: var(--color-accent-green);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.725rem;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+}
+
+.status-pill.performing {
+  background: var(--color-accent-green-bg);
+  color: var(--color-accent-green);
+  border: 1px solid var(--color-status-verified-border);
+}
+
+.status-pill.growth {
+  background: var(--color-light-blue);
+  color: var(--color-status-uploaded);
+  border: 1px solid var(--color-status-uploaded-border);
+}
+
+@media (max-width: 1024px) {
+  .holdings-hero-content {
+    padding: 0 1.25rem;
+  }
+  .holdings-container {
+    padding: 0 1.25rem 3rem;
+  }
+  .portfolio-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .holdings-hero {
+    padding: 1.5rem 0 1.25rem;
+  }
+  .holdings-hero-content {
+    padding: 0 0.85rem;
+  }
+  .holdings-container {
+    padding: 0 0.85rem 3rem;
+  }
+  .holdings-title {
+    font-size: 1.45rem;
+  }
+  .holdings-subtitle {
+    font-size: 0.825rem;
+  }
+  .portfolio-metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+  .table-card-header {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

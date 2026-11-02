@@ -1,0 +1,443 @@
+/**
+ * APPLEN SOLUTIONS – DJ Investor Portal
+ * File: src/Styles/Components/documentCard.css
+ * 
+ * High-End Financial SaaS Document Card & Reviewer Audit Ledger Row
+ * Features subtle borders, left status accents, structured file metadata chips,
+ * compliance rejection callouts, and institutional action buttons.
+ */
+
+.document-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-xs);
+  padding: 1.15rem 1.35rem;
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+  position: relative;
+}
+
+.document-card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================================
+   LEFT STATUS BORDER ACCENTS (Subtle 3px strip)
+   ========================================================================== */
+.document-card.status-border-verified {
+  border-left: 3.5px solid var(--color-accent-green);
+}
+
+.document-card.status-border-under-review {
+  border-left: 3.5px solid var(--color-status-review);
+}
+
+.document-card.status-border-uploaded {
+  border-left: 3.5px solid var(--color-status-uploaded);
+}
+
+.document-card.status-border-pending {
+  border-left: 3.5px solid var(--color-status-pending);
+}
+
+.document-card.status-border-rejected {
+  border-left: 3.5px solid var(--color-status-rejected);
+}
+
+/* ==========================================================================
+   HEADER SECTION: TITLE, GUIDANCE, TAGS & STATUS
+   ========================================================================== */
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.card-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.025rem;
+  font-weight: 700;
+  color: var(--color-dark-navy);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.tag-required {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #B91C1C;
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.04em;
+}
+
+.tag-category {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-sm);
+}
+
+.card-guidance {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   FILE METADATA DETAILS (Compact Financial Ledger Style)
+   ========================================================================== */
+.card-file-details {
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.file-info-main {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.file-format-icon {
+  width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  color: var(--color-primary-navy);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.file-text-meta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.file-name {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--color-dark-navy);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.file-submeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.725rem;
+  color: var(--color-text-muted);
+}
+
+.file-date {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* ==========================================================================
+   REJECTION REASON AUDIT CALLOUT
+   ========================================================================== */
+.rejection-alert {
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.rejection-icon {
+  font-size: 1.15rem;
+  color: var(--color-status-rejected);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.rejection-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.rejection-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #991B1B;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.rejection-reason-text {
+  font-size: 0.8125rem;
+  color: #B91C1C;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* ==========================================================================
+   ACTIONS ROW & BUTTONS
+   ========================================================================== */
+.card-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.785rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.card-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.card-btn svg {
+  font-size: 0.95rem;
+}
+
+/* Variant overrides */
+.btn-danger-outline {
+  background: #FFFFFF;
+  color: var(--color-status-rejected);
+  border-color: #FECACA;
+}
+
+.btn-danger-outline:hover:not(:disabled) {
+  background: #FEE2E2;
+}
+
+.card-status-info {
+  font-size: 0.785rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ==========================================================================
+   REVIEWER MODE STRUCTURED AUDIT ROW STYLING & PENDING SECTION
+   ========================================================================== */
+.reviewer-status-cell {
+  display: flex;
+  align-items: center;
+}
+
+/* Dedicated styling for Pending Document File cell in Reviewer Mode */
+.reviewer-pending-file-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.45rem 0.75rem;
+  background: #FFFBEB;
+  border: 1px dashed #FCD34D;
+  border-radius: var(--radius-sm, 6px);
+  min-width: 0;
+  transition: all 0.2s ease;
+}
+
+.reviewer-pending-file-cell:hover {
+  background: #FEF3C7;
+  border-color: #F59E0B;
+}
+
+.pending-file-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: #B45309;
+}
+
+.pending-file-chip svg {
+  font-size: 0.85rem;
+  color: #D97706;
+}
+
+.pending-file-subtext {
+  font-size: 0.7rem;
+  color: #92400E;
+  opacity: 0.9;
+}
+
+/* Reviewer Action Pending Badge */
+.reviewer-pending-action-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.38rem 0.85rem;
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: #92400E;
+  background: #FEF3C7;
+  border: 1px solid #FDE68A;
+  border-radius: var(--radius-sm, 6px);
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(245, 158, 11, 0.08);
+}
+
+.reviewer-pending-action-chip svg {
+  color: #D97706;
+}
+
+/* Pending Document Card Specific Tint & Border */
+.document-card.status-border-pending {
+  border-left: 3.5px solid #F59E0B;
+}
+
+.document-card.status-border-pending:hover {
+  border-color: #FCD34D;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.08);
+}
+
+.reviewer-checklist-view .document-card.status-border-pending {
+  background: #FFFDF9;
+}
+
+@media (min-width: 961px) {
+  .reviewer-checklist-view .document-card {
+    display: grid;
+    grid-template-columns: 2.5fr 2fr 1.25fr 1.75fr;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0.95rem 1.35rem;
+  }
+
+  .reviewer-checklist-view .card-header {
+    margin: 0;
+    align-items: center;
+  }
+
+  .reviewer-checklist-view .card-file-details {
+    padding: 0.45rem 0.65rem;
+    background: transparent;
+    border-color: transparent;
+  }
+
+  .reviewer-checklist-view .card-actions-row {
+    border-top: none;
+    padding-top: 0;
+    justify-content: flex-end;
+  }
+
+  .reviewer-checklist-view .rejection-alert {
+    grid-column: 1 / -1;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .reviewer-card-mode {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .reviewer-status-cell {
+    margin-top: -0.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .document-card {
+    padding: 1rem;
+    gap: 0.85rem;
+  }
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+  .card-actions-row {
+    justify-content: stretch;
+    width: 100%;
+    gap: 0.45rem;
+  }
+  .card-actions-row .card-btn {
+    flex: 1 1 auto;
+    min-width: 120px;
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+  }
+  .reviewer-pending-action-chip {
+    width: 100%;
+    justify-content: center;
+    padding: 0.45rem 0.75rem;
+  }
+  .card-status-info {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .rejection-alert {
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .document-card {
+    padding: 0.85rem;
+  }
+  .card-actions-row .card-btn {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+}

@@ -1,0 +1,70 @@
+/**
+ * APPLEN SOLUTIONS – DJ Investor Portal
+ * File: src/Styles/Components/statusBadge.css
+ * 
+ * Financial Market Status Indicator Badges
+ * Precise color-coded pills for Pending, Uploaded, Under Review,
+ * Verified, and Rejected states with subtle borders and clear contrast.
+ */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.725rem;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  line-height: 1.25;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.status-badge-icon {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+/* 1. Pending: Amber / Warm Gold */
+.status-badge.status-pending {
+  background-color: var(--color-status-pending-bg);
+  color: var(--color-status-pending);
+  border-color: var(--color-status-pending-border);
+}
+
+/* 2. Uploaded: Deep Sky / Soft Blue */
+.status-badge.status-uploaded {
+  background-color: var(--color-status-uploaded-bg);
+  color: var(--color-status-uploaded);
+  border-color: var(--color-status-uploaded-border);
+}
+
+/* 3. Under Review: Royal Purple / Compliance Inspection */
+.status-badge.status-under-review {
+  background-color: var(--color-status-review-bg);
+  color: var(--color-status-review);
+  border-color: var(--color-status-review-border);
+}
+
+/* 4. Verified: Investment Green / Formally Certified */
+.status-badge.status-verified {
+  background-color: var(--color-status-verified-bg);
+  color: var(--color-status-verified);
+  border-color: var(--color-status-verified-border);
+}
+
+/* 5. Rejected: Crimson / Compliance Alert */
+.status-badge.status-rejected {
+  background-color: var(--color-status-rejected-bg);
+  color: var(--color-status-rejected);
+  border-color: var(--color-status-rejected-border);
+}
+
+/* Large modifier */
+.status-badge.badge-lg {
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+}

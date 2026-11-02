@@ -1,0 +1,418 @@
+/**
+ * APPLEN SOLUTIONS – DJ Investor Portal
+ * File: src/Styles/Pages/reviewerDashboard.css
+ * 
+ * Compliance Officer & Reviewer Workspace Stylesheet
+ * Priority queue highlight banner, regulatory workflow progression bar,
+ * pending investor callout notices, and high-precision audit inspection tools.
+ */
+
+.reviewer-dashboard-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   1. PRIORITY QUEUE HIGHLIGHT BANNER
+   ========================================================================== */
+.review-queue-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #0F1D2F 0%, #142B45 60%, #1A365D 100%);
+  color: #FFFFFF;
+  padding: 1.35rem 1.75rem;
+  border-radius: var(--radius-md, 8px);
+  border: 1px solid rgba(198, 161, 91, 0.3);
+  box-shadow: 0 4px 14px rgba(16, 34, 56, 0.12);
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.queue-highlight-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 680px;
+}
+
+.queue-live-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(198, 161, 91, 0.35);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-pill, 9999px);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: #C6A15B;
+  letter-spacing: 0.06em;
+  width: fit-content;
+}
+
+.live-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+  animation: pulseLiveDot 2s infinite;
+}
+
+@keyframes pulseLiveDot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.queue-highlight-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.queue-highlight-title {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+}
+
+.queue-highlight-title svg {
+  color: #C6A15B;
+  font-size: 1.25rem;
+}
+
+.queue-highlight-desc {
+  font-size: 0.825rem;
+  color: #CBD5E1;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Metric Stats Row inside Banner */
+.queue-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.queue-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  padding: 0.5rem 0.95rem;
+  border-radius: var(--radius-sm, 6px);
+  font-size: 0.8125rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.queue-stat-pill:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.queue-stat-pill.active {
+  background: #FFFFFF !important;
+  color: #102238 !important;
+  border-color: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+}
+
+.queue-stat-pill .pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.queue-stat-pill .pill-dot.blue {
+  background: #60A5FA;
+}
+
+.queue-stat-pill .pill-dot.purple {
+  background: #C084FC;
+}
+
+.queue-stat-pill .pill-dot.amber {
+  background: #FBBF24;
+}
+
+.queue-stat-pill .pill-label {
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.queue-stat-pill.active .pill-label {
+  font-weight: 700;
+  opacity: 1;
+}
+
+.queue-stat-pill .pill-number {
+  font-family: var(--font-display, sans-serif);
+  font-weight: 800;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1px 7px;
+  border-radius: var(--radius-pill, 9999px);
+}
+
+.queue-stat-pill.active .pill-number {
+  background: #142B45;
+  color: #FFFFFF;
+}
+
+/* Distinct amber modifier for pending investor submissions pill */
+.queue-stat-pill.amber {
+  border-color: rgba(251, 191, 36, 0.4);
+}
+
+.queue-stat-pill.amber:hover {
+  background: rgba(251, 191, 36, 0.15);
+  border-color: #FBBF24;
+}
+
+/* ==========================================================================
+   2. DEDICATED PENDING INVESTOR SUBMISSIONS CALLOUT
+   ========================================================================== */
+.reviewer-pending-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-left: 4px solid #D97706;
+  border-radius: var(--radius-md, 8px);
+  padding: 1.15rem 1.45rem;
+  box-shadow: var(--shadow-xs, 0 1px 2px rgba(0, 0, 0, 0.05));
+  animation: fadeInAlert 0.25s ease-out;
+  flex-wrap: wrap;
+}
+
+@keyframes fadeInAlert {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pending-callout-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm, 6px);
+  background: #FEF3C7;
+  border: 1px solid #FCD34D;
+  color: #B45309;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.pending-callout-content {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pending-callout-title {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #92400E;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.pending-callout-desc {
+  font-size: 0.8125rem;
+  color: #78350F;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.pending-callout-desc strong {
+  color: #451A03;
+}
+
+.pending-callout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #92400E;
+  background: #FEF3C7;
+  border: 1px solid #FCD34D;
+  border-radius: var(--radius-sm, 6px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.pending-callout-btn:hover {
+  background: #FDE68A;
+  color: #78350F;
+  border-color: #F59E0B;
+}
+
+/* ==========================================================================
+   3. REGULATORY COMPLIANCE WORKFLOW PROGRESSION BAR
+   ========================================================================== */
+.reviewer-workflow-banner {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border, #E2E8F0);
+  border-radius: var(--radius-md, 8px);
+  padding: 0.95rem 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  box-shadow: 0 1px 3px rgba(16, 34, 56, 0.04);
+}
+
+.workflow-steps-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.workflow-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-sm, 6px);
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  color: #64748B;
+  transition: all 0.2s ease;
+}
+
+.workflow-step.active {
+  background: #EAF1F8;
+  border-color: #BFDBFE;
+  color: #142B45;
+  font-weight: 700;
+}
+
+.workflow-step.highlight-amber {
+  background: #FEF3C7 !important;
+  border-color: #FDE68A !important;
+  color: #92400E !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+.workflow-step.highlight-blue {
+  background: #EAF1F8 !important;
+  border-color: #93C5FD !important;
+  color: #1D4ED8 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.15);
+}
+
+.workflow-step.highlight-purple {
+  background: #F3E8FF !important;
+  border-color: #DDD6FE !important;
+  color: #6D28D9 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.15);
+}
+
+.workflow-arrow {
+  color: #94A3B8;
+  font-size: 0.725rem;
+}
+
+@media (max-width: 900px) {
+  .review-queue-highlight {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.15rem 1.25rem;
+  }
+  .queue-stats-row {
+    width: 100%;
+  }
+  .queue-stat-pill {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviewer-workflow-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .reviewer-pending-callout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .pending-callout-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 580px) {
+  .queue-stats-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .queue-stat-pill {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.6rem 0.85rem;
+  }
+  .workflow-steps-group {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.45rem;
+  }
+  .workflow-step {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0.4rem 0.75rem;
+  }
+  .workflow-arrow {
+    display: none;
+  }
+}

@@ -1,0 +1,347 @@
+/**
+ * APPLEN SOLUTIONS – DJ Investor Portal
+ * File: src/Styles/Components/dashboard.css
+ * 
+ * Institutional Investment Dashboard Header & Summary Metrics
+ * Elegant corporate greeting, KYC compliance progress indicator,
+ * and 4 minimalist, high-trust wealth management metric cards.
+ */
+
+.dashboard-hero {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--color-border);
+  padding: 2.25rem 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-hero-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* ==========================================================================
+   TOP HEADER: GREETING & COMPLIANCE PROGRESS
+   ========================================================================== */
+.hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 720px;
+}
+
+.hero-pretitle-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hero-pretitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-accent-gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero-account-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-dark-navy);
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* Overall Document Submission Progress Card */
+.verification-progress-card {
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  min-width: 300px;
+  box-shadow: var(--shadow-xs);
+}
+
+.progress-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-dark-navy);
+}
+
+.progress-title svg {
+  color: var(--color-accent-green);
+  font-size: 0.95rem;
+}
+
+.progress-percentage-value {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-accent-green);
+}
+
+.progress-track {
+  width: 100%;
+  height: 7px;
+  background: #E2E8F0;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.progress-indicator {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent-green) 0%, #10B981 100%);
+  border-radius: var(--radius-pill);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.progress-status-chip {
+  font-weight: 600;
+  color: var(--color-accent-green);
+}
+
+/* ==========================================================================
+   SUMMARY METRIC CARDS (4 CARDS)
+   ========================================================================== */
+.summary-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.summary-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.summary-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.summary-card-inner {
+  padding: 1.25rem 1.35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.summary-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.summary-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.summary-count {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-dark-navy);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-top: 2px;
+}
+
+.summary-hint {
+  font-size: 0.725rem;
+  color: var(--color-text-light);
+  margin-top: 2px;
+}
+
+.summary-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  background: var(--color-bg-light);
+  color: var(--color-primary-navy);
+  border: 1px solid var(--color-border);
+}
+
+/* Subtle Institutional Bottom Accent Stripe */
+.summary-card-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.summary-card-accent.accent-navy {
+  background: var(--color-primary-navy);
+}
+
+.summary-card-accent.accent-amber {
+  background: var(--color-status-pending);
+}
+
+.summary-card-accent.accent-blue {
+  background: var(--color-status-uploaded);
+}
+
+.summary-card-accent.accent-green {
+  background: var(--color-accent-green);
+}
+
+/* Specific icon background adjustments */
+.summary-card.card-pending .summary-icon-wrapper {
+  background: #FFFBEB;
+  color: var(--color-status-pending);
+  border-color: var(--color-status-pending-border);
+}
+
+.summary-card.reviewer-pending-stat-card {
+  border-color: #FDE68A;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF7 100%);
+}
+
+.summary-card.reviewer-pending-stat-card:hover {
+  border-color: #FCD34D;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.12);
+}
+
+.summary-card.reviewer-pending-stat-card .summary-count {
+  color: #B45309;
+}
+
+.summary-card.card-uploaded .summary-icon-wrapper {
+  background: var(--color-light-blue);
+  color: var(--color-status-uploaded);
+  border-color: var(--color-status-uploaded-border);
+}
+
+.summary-card.card-verified .summary-icon-wrapper {
+  background: var(--color-accent-green-bg);
+  color: var(--color-accent-green);
+  border-color: var(--color-status-verified-border);
+}
+
+/* Responsive grid across all devices */
+@media (max-width: 1024px) {
+  .dashboard-hero-content {
+    padding: 0 1.25rem;
+  }
+  .summary-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-hero {
+    padding: 1.75rem 0 1.5rem;
+  }
+  .hero-header {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .hero-titles {
+    max-width: 100%;
+  }
+  .verification-progress-card {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-hero-content {
+    padding: 0 0.85rem;
+  }
+  .hero-title {
+    font-size: 1.45rem;
+  }
+  .hero-subtitle {
+    font-size: 0.825rem;
+  }
+  .summary-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+  .summary-card-inner {
+    padding: 1rem 1.15rem;
+  }
+  .summary-count {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-title {
+    font-size: 1.3rem;
+  }
+  .hero-pretitle-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+}
